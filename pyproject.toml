@@ -84,6 +84,10 @@ train = [
 
 [tool.setuptools.packages.find]
 include = ["sam3*"]
+exclude = ["build*", "scripts*", "examples*"]
+
+[tool.setuptools.package-data]
+sam3 = ["assets/*.txt.gz"]
 
 [tool.setuptools.dynamic]
 version = {attr = "sam3.__version__"}
